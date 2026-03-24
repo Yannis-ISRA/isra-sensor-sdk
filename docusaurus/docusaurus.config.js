@@ -5,10 +5,6 @@ const config = {
     tagline: "Documentation d'intégration industrielle RFID UHF",
     favicon: "img/logo.png",
 
-    future: {
-        v4: true,
-    },
-
     url: "https://yannis-isra.github.io",
     baseUrl: "/isra-sensor-sdk/",
 
