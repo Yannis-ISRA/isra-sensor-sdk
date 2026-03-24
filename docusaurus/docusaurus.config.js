@@ -31,7 +31,7 @@ const config = {
             {
                 docs: {
                     sidebarPath: "./sidebars.js",
-                    routeBasePath: "docs",
+                    routeBasePath: "/",
                     editUrl: "https://github.com/Yannis-ISRA/isra-sensor-sdk/tree/main/sdk_portal/docusaurus/",
                 },
                 blog: false,
@@ -72,19 +72,6 @@ const config = {
         },
         footer: {
             style: "dark",
-            links: [
-                {
-                    title: "Docs",
-                    items: [
-                        { label: "Quickstart", to: "/docs/quickstart" },
-                        { label: "Guide intégration", to: "/docs/integration-guide" },
-                    ],
-                },
-                {
-                    title: "Projet",
-                    items: [{ label: "GitHub", href: "https://github.com/Yannis-ISRA/isra-sensor-sdk" }],
-                },
-            ],
             copyright: `© ${new Date().getFullYear()} ISRA CARDS - ISRA Sensor SDK`,
         },
         prism: {

@@ -7,6 +7,14 @@ title: Quickstart
 
 Ce guide permet de démarrer rapidement avec le SDK ISRA.
 
+## Présentation du projet
+
+Le projet **ISRA Sensor SDK** fournit une documentation d’intégration claire pour l’usage industriel de capteurs RFID UHF (température/humidité), avec une approche simple à maintenir :
+
+- documentation technique orientée intégration
+- structure bilingue FR/EN
+- déploiement automatique via GitHub Pages
+
 ## 1) Prérequis
 
 - Python 3.10+
