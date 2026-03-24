@@ -1,0 +1,37 @@
+:root {
+    --ifm-color-primary: #1f6feb;
+    --ifm-color-primary-dark: #1b63d4;
+    --ifm-color-primary-darker: #195ec8;
+    --ifm-color-primary-darkest: #154ea5;
+    --ifm-color-primary-light: #2f7af0;
+    --ifm-color-primary-lighter: #3d84f2;
+    --ifm-color-primary-lightest: #5f98f5;
+    --ifm-code-font-size: 95%;
+}
+
+.israHero {
+    background: linear-gradient(135deg, #0f172a 0%, #1f2937 40%, #1f6feb 100%);
+}
+
+.heroCta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.featuresSection {
+    padding: 3rem 0;
+}
+
+.featureCard {
+    background: var(--ifm-card-background-color, #fff);
+    border: 1px solid var(--ifm-color-emphasis-200);
+    border-radius: 12px;
+    padding: 1.25rem;
+    height: 100%;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="dark"] .featureCard {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+}

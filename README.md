@@ -1,81 +1,29 @@
-# ISRA Sensor SDK
+# ISRA Sensor SDK - Docs Portal (Simple)
 
-SDK Python et documentation d’intégration pour capteurs RFID ISRA (température/humidité) via lecteurs UHF RS-232, RS-485 et Ethernet.
+Ce dossier est prêt à être copié tel quel dans GitHub pour publier une belle documentation Docusaurus.
 
-Python SDK and integration documentation for ISRA RFID sensors (temperature/humidity) over UHF readers via RS-232, RS-485, and Ethernet.
+## Ce que tu dois uploader
 
----
+- `docusaurus/`
+- `.github/workflows/deploy-docs.yml`
 
-## 🇫🇷 Français
+## Logo (un seul fichier)
 
-### Démarrage rapide
+Place ton logo ici :
 
-1. Installer Python 3.10+.
-2. Installer la dépendance série :
+- `docusaurus/static/img/logo.png`
 
-```bash
-pip install pyserial
-```
+Le même logo est utilisé pour :
+- le logo de la navbar
+- la favicon
 
-3. Lancer l’exemple :
+## Publication GitHub Pages
 
-```bash
-python examples/read_to_json.py
-```
+1. Upload/push ce dossier dans ton repo `isra-sensor-sdk`
+2. Va dans `Settings -> Pages`
+3. Choisis `Source = GitHub Actions`
+4. Attends le workflow `Deploy Docusaurus to GitHub Pages`
 
-### Documentation
+URL finale :
 
-- [Portail Documentation](docs/index.md)
-- [Quickstart FR](docs/fr/quickstart.md)
-- [Guide d’intégration FR](docs/fr/guide_integration.md)
-- [Prompt IA d’adaptation lecteur](docs/fr/reader_adaptation_prompt.md)
-
----
-
-## 🇬🇧 English
-
-### Quick Start
-
-1. Install Python 3.10+.
-2. Install serial dependency:
-
-```bash
-pip install pyserial
-```
-
-3. Run the example:
-
-```bash
-python examples/read_to_json.py
-```
-
-### Documentation
-
-- [Documentation Portal](docs/index.md)
-- [Quickstart EN](docs/en/quickstart.md)
-- [Integration Guide EN](docs/en/integration_guide.md)
-- [AI Prompt for Reader Adaptation](docs/en/reader_adaptation_prompt.md)
-
----
-
-## Repository Structure
-
-```text
-.
-├─ sdk/
-│  ├─ isra_sdk_core.py
-│  ├─ isra_readers.py
-│  └─ __init__.py
-├─ examples/
-│  └─ read_to_json.py
-└─ docs/
-   ├─ index.md
-   ├─ fr/
-   │  ├─ quickstart.md
-   │  ├─ guide_integration.md
-   │  └─ reader_adaptation_prompt.md
-   └─ en/
-      ├─ quickstart.md
-      ├─ integration_guide.md
-      └─ reader_adaptation_prompt.md
-```
+`https://yannis-isra.github.io/isra-sensor-sdk/`
