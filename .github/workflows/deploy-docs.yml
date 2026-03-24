@@ -1,54 +1,96 @@
-name: Deploy Docusaurus to GitHub Pages
+// @ts-check
 
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
+const config = {
+    title: "ISRA Sensor SDK",
+    tagline: "Documentation d'intégration industrielle RFID UHF",
+    favicon: "img/logo.png",
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    url: "https://yannis-isra.github.io",
+    baseUrl: "/isra-sensor-sdk/",
 
-concurrency:
-  group: pages
-  cancel-in-progress: true
+    organizationName: "Yannis-ISRA",
+    projectName: "isra-sensor-sdk",
+    deploymentBranch: "gh-pages",
+    trailingSlash: false,
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    onBrokenLinks: "throw",
+    onBrokenMarkdownLinks: "warn",
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+    i18n: {
+        defaultLocale: "fr",
+        locales: ["fr", "en"],
+        localeConfigs: {
+            fr: { label: "Français" },
+            en: { label: "English" },
+        },
+    },
 
-      - name: Install dependencies
-        working-directory: docusaurus
-        run: npm install
+    presets: [
+        [
+            "classic",
+            {
+                docs: {
+                    sidebarPath: "./sidebars.js",
+                    routeBasePath: "docs",
+                    editUrl: "https://github.com/Yannis-ISRA/isra-sensor-sdk/tree/main/sdk_portal/docusaurus/",
+                },
+                blog: false,
+                theme: {
+                    customCss: "./src/css/custom.css",
+                },
+            },
+        ],
+    ],
 
-      - name: Build website
-        working-directory: docusaurus
-        run: npm run build
+    themeConfig: {
+        colorMode: {
+            respectPrefersColorScheme: true,
+        },
+        navbar: {
+            title: "ISRA SDK",
+            logo: {
+                alt: "ISRA Logo",
+                src: "img/logo.png",
+            },
+            items: [
+                {
+                    type: "docSidebar",
+                    sidebarId: "tutorialSidebar",
+                    position: "left",
+                    label: "Documentation",
+                },
+                {
+                    href: "https://github.com/Yannis-ISRA/isra-sensor-sdk",
+                    label: "GitHub",
+                    position: "right",
+                },
+                {
+                    type: "localeDropdown",
+                    position: "right",
+                },
+            ],
+        },
+        footer: {
+            style: "dark",
+            links: [
+                {
+                    title: "Docs",
+                    items: [
+                        { label: "Quickstart", to: "/docs/quickstart" },
+                        { label: "Guide intégration", to: "/docs/integration-guide" },
+                    ],
+                },
+                {
+                    title: "Projet",
+                    items: [{ label: "GitHub", href: "https://github.com/Yannis-ISRA/isra-sensor-sdk" }],
+                },
+            ],
+            copyright: `© ${new Date().getFullYear()} ISRA CARDS - ISRA Sensor SDK`,
+        },
+        prism: {
+            additionalLanguages: ["bash", "powershell", "python"],
+        },
+    },
+};
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docusaurus/build
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+module.exports = config;
