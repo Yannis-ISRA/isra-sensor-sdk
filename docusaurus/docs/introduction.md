@@ -10,7 +10,7 @@ Bienvenue dans la documentation des capteurs d'humidité et de température fabr
 
 Notre projet vise la conception et la fabrication de capteurs UHF passifs de température et d'humidité, pensés pour des environnements industriels exigeants.
 
-<video controls preload="metadata" poster="/img/illustration2.jpg" style="max-width:900px; width:100%; height:auto; border-radius:12px; margin: 12px 0;">
+<video controls preload="metadata" poster="/img/illustration2.jpg" style={{ maxWidth: '900px', width: '100%', height: 'auto', borderRadius: '12px', margin: '12px 0' }}>
   <source src="/img/video1.mp4" type="video/mp4" />
   Votre navigateur ne supporte pas la lecture vidéo.
 </video>
