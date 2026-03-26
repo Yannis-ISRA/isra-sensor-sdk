@@ -6,9 +6,14 @@ slug: /
 
 # Introduction
 
-Bienvenue dans la documentation ISRA Sensor SDK.
+Bienvenue dans la documentation des capteurs d'humidité et de température fabriqués par ISRA.
 
 Notre projet vise la conception et la fabrication de capteurs UHF passifs de température et d'humidité, pensés pour des environnements industriels exigeants.
+
+<video controls preload="metadata" poster="/img/illustration2.jpg" style="max-width:900px; width:100%; height:auto; border-radius:12px; margin: 12px 0;">
+  <source src="/img/video1.mp4" type="video/mp4" />
+  Votre navigateur ne supporte pas la lecture vidéo.
+</video>
 
 ## Pourquoi cette approche est différente
 
@@ -24,21 +29,17 @@ Notre projet vise la conception et la fabrication de capteurs UHF passifs de tem
 
 ## Bénéfices environnementaux
 
-- Pas de batterie à produire, transporter et recycler
-- Moins de déchets sur tout le cycle de vie
+- Pas de batterie à recycler
+- Peu de déchets sur tout le cycle de vie
 - Format compact (plus petit qu'une carte bancaire) et faible quantité de matière
 
-## Bénéfices économiques (TCO)
+## Bénéfices économiques
 
 - Coût global réduit (installation + maintenance + exploitation)
 - Déploiement scalable sans complexifier le câblage
 - Fiabilité terrain renforcée grâce à une architecture simplifiée
 
-### 📷 Illustration recommandée
-Comparatif visuel: capteur passif UHF vs capteur actif à batterie (maintenance, câblage, déchets, coût total).
-
-### 🧭 Schéma recommandé
-`Lecteur UHF -> Capteur passif Temp/Hum -> Mini-app -> Supervision / SI`
+![Illustration capteur passif UHF](/img/illustration1.jpg)
 
 ## Continuer
 
